@@ -23,7 +23,7 @@ jobs:
           repository: toineenzo/YOURLS-nl_NL
           ref: main
           path: target
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.YOURLS_POT }}
 
       - name: Sync official YOURLS.pot File
         run: |
