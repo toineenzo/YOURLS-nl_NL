@@ -1,0 +1,44 @@
+name: Sync official YOURLS.pot File from upstream
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Runs every Sunday at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Source Repository (YOURLS.pot)
+        uses: actions/checkout@v4
+        with:
+          repository: YOURLS/YOURLS.pot
+          ref: main
+          path: source
+
+      - name: Checkout Target Repository (Fork)
+        uses: actions/checkout@v4
+        with:
+          repository: toineenzo/YOURLS-nl_NL
+          ref: main
+          path: target
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Sync official YOURLS.pot File
+        run: |
+          # Compare files before copying to avoid unnecessary commits
+          if ! cmp -s source/YOURLS.pot target/YOURLS.pot; then
+            echo "Changes detected. Updating YOURLS.pot..."
+            cp -f source/YOURLS.pot target/YOURLS.pot
+            cd target
+          
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+            git add YOURLS.pot
+            git commit -m "Sync official YOURLS.pot file from upstream"
+            git push origin main
+          else
+            echo "No changes detected. Skipping commit."
+          fi
