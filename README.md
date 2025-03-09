@@ -1,10 +1,9 @@
-# Dutch translation for Yourls (1.7.x)
+# Nederlandse vertaling voor YOURLS (>=v1.9.2)
+Verbeterde en vernieuwde Nederlandse vertaling voor YOURLS
 
-## Nederlandse vertaling voor Yourls (1.7.x)
+Oude maintainer: @beun
 
-## Installatie...
-Upload bestand nl_NL.mo naar: YOUR-YOURLS-DOMAIN/user/languages
-
-Voeg de volgende twee regels toe aan je config.php:   
-       //** Set custom language */   
-       define( 'YOURLS_LANG', 'nl_NL' );
+## Installatie
+1. Upload het ```nl_NL.mo``` en ```nl_NL.po``` bestand naar: ```<YOUR-YOURLS-DOMAIN>/user/languages```
+2. Verander in ```<YOUR-YOURLS-DOMAIN>/user/languages/config.php``` de volgende regel (rond regel 64):   
+       ```define( 'YOURLS_LANG', '' );``` naar ```define( 'YOURLS_LANG', 'nl_NL' );```
