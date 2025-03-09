@@ -1,4 +1,4 @@
-# SOME DESCRIPTIVE TITLE.
+# A new title
 # This file is put in the public domain.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
