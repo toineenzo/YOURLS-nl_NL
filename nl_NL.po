@@ -24,7 +24,7 @@ msgstr "Aan het zoeken naar <strong>%1$s</strong> in <strong>%2$s</strong>."
 #: admin/index.php:161 admin/index.php:172 admin/index.php:183
 #, php-format
 msgid "Short URL created, but could not redirect to %s !"
-msgstr "Verkorte URL aangemaakt, maar kon niet doorsturen naar %s !"
+msgstr "Verkorte URL aangemaakt, maar kon niet doorsturen naar %s!"
 
 #: admin/index.php:193
 msgid "Unknown \"Share\" bookmarklet"
