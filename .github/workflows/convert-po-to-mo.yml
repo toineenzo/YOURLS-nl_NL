@@ -17,12 +17,20 @@ jobs:
       - name: Install po2mo
         run: |
           curl -fsSL https://raw.githubusercontent.com/devjiwonchoi/po2mo/main/scripts/install.sh | sh
-          echo "$HOME/.local/bin" >> $GITHUB_PATH  # Ensure installed binaries are accessible
+          echo "$HOME/.local/bin" >> $GITHUB_PATH  # Add installation path to system PATH
+          echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc  # Persist PATH
+          source ~/.bashrc  # Reload shell
+
+      - name: Verify po2mo installation
+        run: |
+          ls -l $HOME/.local/bin
+          which po2mo || echo "po2mo not found in PATH"
+          echo $PATH
 
       - name: Convert nl_NL.po to nl_NL.mo
         run: |
           export PATH="$HOME/.local/bin:$PATH"
-          po2mo nl_NL.po nl_NL.mo
+          $HOME/.local/bin/po2mo nl_NL.po nl_NL.mo  # Use full path to ensure execution
 
       - name: Commit and push changes
         run: |
