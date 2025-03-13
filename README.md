@@ -1,5 +1,5 @@
 # Nederlandse vertaling voor YOURLS (>=v1.9.x)
-Verbeterde en vernieuwde Nederlandse vertaling voor YOURLS // Imrpoved and refreshed Dutch translation for YOURLS
+Verbeterde en vernieuwde Nederlandse vertaling voor YOURLS // Improved and refreshed Dutch translation for YOURLS
 
 Listed in [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 
