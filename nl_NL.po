@@ -1340,10 +1340,10 @@ msgstr "Je verkorte link"
 #~ msgstr "Met de Standaard bookmarklets krijg je ook een <span>Snel delen</span> toolbox waarmee je in een handomdraai berichten kunt posten op Twitter, Facebook of Friendfeed."
 
 #~ msgid "<strong>Notice</strong>: your password is stored as clear text in your <tt>config.php</tt>"
-#~ msgstr "<strong>Opmerking</strong>: je wachtwoord is opgeslagen in <tt>config.php</tt> in platte tekst. "
+#~ msgstr "<strong>Opmerking</strong>: je wachtwoord is opgeslagen in <tt>config.php</tt> in platte tekst."
 
 #~ msgid "Did you know you can easily improve the security of your YOURLS install by <strong>encrypting</strong> your password?"
-#~ msgstr "Wist je dat je eenvoudig de veiligheid van je YOURLS installatie kan verbeteren door je wachtwoord te <strong>versleutelen</strong>? "
+#~ msgstr "Wist je dat je eenvoudig de veiligheid van je YOURLS installatie kan verbeteren door je wachtwoord te <strong>versleutelen</strong>?"
 
 #~ msgid "See <a href=\"http://yourls.org/userpassword\">UsernamePassword</a> for details"
 #~ msgstr "Ga naar <a href=\"http://yourls.org/userpassword\">UsernamePassword</a> voor informatie."
