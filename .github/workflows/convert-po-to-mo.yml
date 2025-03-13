@@ -3,9 +3,8 @@ name: Convert PO to MO
 on:
   push:
     paths:
-      - 'nl_NL.po'
-    branches:
-      - main  # Change this if your default branch is different
+      - 'nl_NL.po' #run when .po file changes
+  workflow_dispatch: #or manually run
 
 jobs:
   convert-po-to-mo:
