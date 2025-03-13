@@ -4,7 +4,8 @@ on:
   push:
     paths:
       - 'nl_NL.po'  # Triggers only when nl_NL.po is modified
-  workflow_dispatch:  # Allows manual triggering
+    branches:
+      - '*'  # Matches any branch
 
 jobs:
   convert-po-to-mo:
@@ -20,12 +21,14 @@ jobs:
           echo "$HOME/.local/bin" >> $GITHUB_PATH  # Ensure installed binaries are accessible
 
       - name: Convert nl_NL.po to nl_NL.mo
-        run: po2mo nl_NL.po nl_NL.mo
+        run: |
+          export PATH="$HOME/.local/bin:$PATH"
+          po2mo nl_NL.po nl_NL.mo
 
       - name: Commit and push changes
         run: |
           git config --global user.name "YOURLS PO to MO converter"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "yourls-po2mo@users.noreply.github.com"
           git add nl_NL.mo
           git commit -m "Auto-generate nl_NL.mo from nl_NL.po"
           git push
