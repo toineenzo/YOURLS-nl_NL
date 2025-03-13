@@ -26,10 +26,8 @@ jobs:
         run: |
           echo "Checking if po2mo is in PATH..."
           which po2mo || echo "po2mo not found in PATH"
-
           echo "Checking default installation directory..."
           ls -l $HOME/.local/bin || echo "Directory does not exist"
-
           echo "Searching entire home directory for po2mo..."
           find $HOME -name "po2mo" 2>/dev/null
 
@@ -44,13 +42,22 @@ jobs:
             echo "po2mo not found. Exiting."
             exit 1
           fi
+          echo "Listing nl_NL.mo file after conversion:"
+          ls -l nl_NL.mo || echo "nl_NL.mo not found!"
 
       - name: Commit and push changes
         run: |
-          git config --global user.name "YOURLS PO to MO converter"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add nl_NL.mo
-          git commit -m "Auto-generate nl_NL.mo from nl_NL.po"
-          git push
+          if [ -f "nl_NL.mo" ]; then
+            echo "File nl_NL.mo exists, proceeding with commit..."
+            git config --global user.name "YOURLS PO to MO converter"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
+            git add nl_NL.mo
+            git diff --cached --quiet && echo "No changes to commit." && exit 0
+            git commit -m "Auto-generate nl_NL.mo from nl_NL.po"
+            git push
+          else
+            echo "nl_NL.mo file is missing! Exiting..."
+            exit 1
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.YOURLS_POT }}
