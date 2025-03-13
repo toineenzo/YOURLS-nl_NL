@@ -14,23 +14,36 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Ensure local bin directory exists
+        run: mkdir -p $HOME/.local/bin  # Ensure the directory exists before installation
+
       - name: Install po2mo
         run: |
           curl -fsSL https://raw.githubusercontent.com/devjiwonchoi/po2mo/main/scripts/install.sh | sh
           echo "$HOME/.local/bin" >> $GITHUB_PATH  # Add installation path to system PATH
-          echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc  # Persist PATH
-          source ~/.bashrc  # Reload shell
 
       - name: Verify po2mo installation
         run: |
-          ls -l $HOME/.local/bin
+          echo "Checking if po2mo is in PATH..."
           which po2mo || echo "po2mo not found in PATH"
-          echo $PATH
+
+          echo "Checking default installation directory..."
+          ls -l $HOME/.local/bin || echo "Directory does not exist"
+
+          echo "Searching entire home directory for po2mo..."
+          find $HOME -name "po2mo" 2>/dev/null
 
       - name: Convert nl_NL.po to nl_NL.mo
         run: |
           export PATH="$HOME/.local/bin:$PATH"
-          $HOME/.local/bin/po2mo nl_NL.po nl_NL.mo  # Use full path to ensure execution
+          PO2MO_PATH=$(find $HOME -name "po2mo" 2>/dev/null | head -n 1)  # Get first found path
+          if [ -x "$PO2MO_PATH" ]; then
+            echo "Using found po2mo at: $PO2MO_PATH"
+            $PO2MO_PATH nl_NL.po nl_NL.mo
+          else
+            echo "po2mo not found. Exiting."
+            exit 1
+          fi
 
       - name: Commit and push changes
         run: |
