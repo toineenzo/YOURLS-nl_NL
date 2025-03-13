@@ -28,7 +28,7 @@ jobs:
       - name: Commit and push changes
         run: |
           git config --global user.name "YOURLS PO to MO converter"
-          git config --global user.email "yourls-po2mo@users.noreply.github.com"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add nl_NL.mo
           git commit -m "Auto-generate nl_NL.mo from nl_NL.po"
           git push
