@@ -4,8 +4,7 @@ on:
   push:
     paths:
       - 'nl_NL.po'  # Triggers only when nl_NL.po is modified
-    branches:
-      - '*'  # Matches any branch
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   convert-po-to-mo:
