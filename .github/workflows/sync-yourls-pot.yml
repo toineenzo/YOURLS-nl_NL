@@ -32,8 +32,8 @@ jobs:
             echo "Changes detected. Updating YOURLS.pot..."
             cp -f source/YOURLS.pot target/YOURLS.pot
             cd target
-            git config --global user.name "github-actions[bot]"
-            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git config --global user.name "YOURLS.POT syncer"
+            git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add YOURLS.pot
             git commit -m "Sync official YOURLS.pot file from upstream"
             git push
