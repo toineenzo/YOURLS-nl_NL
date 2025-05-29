@@ -3,7 +3,7 @@ Verbeterde en vernieuwde Nederlandse vertaling voor YOURLS // Improved and refre
 
 Listed in [![Listed in Awesome YOURLS!](https://img.shields.io/badge/Awesome-YOURLS-C5A3BE)](https://github.com/YOURLS/awesome-yourls/)
 
-Oude maintainer: @beun
+Oude maintainer: [@Beun](https://github.com/Beun)
 
 ## Installatie
 1. Upload het ```nl_NL.mo``` en ```nl_NL.po``` bestand naar: ```<YOUR-YOURLS-DOMAIN>/user/languages```
