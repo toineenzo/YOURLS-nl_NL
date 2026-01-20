@@ -1,47 +1,50 @@
 name: Create nl_NL Release
-
 on:
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
       - name: Verify files exist
         run: |
           test -f "nl_NL.po" || (echo "Missing nl_NL.po" && exit 1)
           test -f "nl_NL.mo" || (echo "Missing nl_NL.mo" && exit 1)
-
       - name: Extract metadata from nl_NL.po
         id: meta
+        shell: bash
         run: |
-          PROJECT_ID=$(grep -m1 'Project-Id-Version:' nl_NL.po | sed 's/.*: "\(.*\)".*/\1/')
-          REV_DATE=$(grep -m1 'PO-Revision-Date:' nl_NL.po | sed 's/.*: "\(....-..-..\).*/\1/')
-
-          TAG="${PROJECT_ID}_${REV_DATE}"
+          # PO headers are usually like: "Project-Id-Version: YOURLS 1.10.x\n"
+          PROJECT_ID="$(awk -F': ' '/^"Project-Id-Version:/{v=$2; sub(/\\n".*/,"",v); print v; exit}' nl_NL.po)"
+          REV_DATE="$(awk -F': ' '/^"PO-Revision-Date:/{v=$2; sub(/\\n".*/,"",v); sub(/ .*/,"",v); print v; exit}' nl_NL.po)"
+          if [ -z "$PROJECT_ID" ]; then
+            echo "Could not parse Project-Id-Version from nl_NL.po" >&2
+            exit 1
+          fi
+          if [ -z "$REV_DATE" ]; then
+            echo "Could not parse PO-Revision-Date from nl_NL.po" >&2
+            exit 1
+          fi
+          # Make a safe tag/file component: replace spaces & separators with '-', keep only safe chars
+          SAFE_PROJECT_ID="$(echo "$PROJECT_ID" | tr '[:space:]/:\' '-' | tr -cd 'A-Za-z0-9._-')"
+          TAG="${SAFE_PROJECT_ID}_${REV_DATE}"
           TITLE="${PROJECT_ID} – ${REV_DATE}"
-
-          echo "tag=$TAG" >> $GITHUB_OUTPUT
-          echo "title=$TITLE" >> $GITHUB_OUTPUT
-
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
       - name: Create zip file
+        shell: bash
         run: |
           ZIP_NAME="nl_NL_${{ steps.meta.outputs.tag }}.zip"
           zip -j "$ZIP_NAME" nl_NL.po nl_NL.mo
-          echo "zip=$ZIP_NAME" >> $GITHUB_ENV
-
+          echo "ZIP_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ steps.meta.outputs.tag }}
           name: ${{ steps.meta.outputs.title }}
-          files: ${{ env.zip }}
+          files: ${{ env.ZIP_NAME }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
