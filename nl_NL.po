@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: YOURLS 1.9.x\n"
+"Project-Id-Version: YOURLS 1.10.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-04 21:48+0000\n"
-"PO-Revision-Date: 2025-03-10 01:54+0100\n"
+"POT-Creation-Date: 2026-01-11 03:57+0000\n"
+"PO-Revision-Date: 2026-01-20 14:52+0100\n"
 "Last-Translator: Toine Rademacher (toineenzo) <hi@toine.zip>\n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -11,8 +11,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.5\n"
-"X-Poedit-KeywordsList: yourls__;yourls_e;yourls_s;yourls_se;yourls_esc_attr__;yourls_esc_html__;yourls_x;yourls_ex;yourls_esc_attr_x;yourls_esc_html_x;yourls_n:1,2;yourls_nx:1,2;yourls_n_noop:1,2;yourls_nx_noop:1,2\n"
+"X-Generator: Poedit 3.8\n"
+"X-Poedit-KeywordsList: "
+"yourls__;yourls_e;yourls_s;yourls_se;yourls_esc_attr__;yourls_esc_html__;yourls_x;yourls_ex;yourls_esc_attr_x;yourls_esc_html_x;yourls_n:1,2;yourls_nx:1,2;yourls_n_noop:1,2;yourls_nx_noop:1,2\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -21,33 +22,49 @@ msgstr ""
 msgid "Searching for <strong>%1$s</strong> in <strong>%2$s</strong>."
 msgstr "Aan het zoeken naar <strong>%1$s</strong> in <strong>%2$s</strong>."
 
-#: admin/index.php:161 admin/index.php:172 admin/index.php:183
+#: admin/index.php:164 admin/index.php:175 admin/index.php:186
 #, php-format
 msgid "Short URL created, but could not redirect to %s !"
 msgstr "Verkorte URL aangemaakt, maar kon niet doorsturen naar %s!"
 
-#: admin/index.php:193
+#: admin/index.php:196
 msgid "Unknown \"Share\" bookmarklet"
 msgstr "Onbekende \"Delen\" bookmarklet"
 
-#: admin/index.php:246
-#, php-format
-msgid "Display <strong>%1$s</strong> to <strong class=\"increment\">%2$s</strong> of <strong class=\"increment\">%3$s</strong> URLs"
-msgstr "<strong>%1$s</strong> tot <strong class=\"increment\">%2$s</strong> van <strong class=\"increment\">%3$s</strong> URL’s weergeven"
+#: admin/index.php:250
+msgid "No URLs."
+msgstr "Geen URL's."
 
-#: admin/index.php:248
+#: admin/index.php:252
+msgid "Try being less specific"
+msgstr "Probeer minder specifiek te zijn"
+
+#: admin/index.php:254
+#, php-format
+msgid ""
+"Display <strong>%1$s</strong> to <strong class=\"increment\">%2$s</strong> "
+"of <strong class=\"increment\">%3$s</strong> URLs"
+msgstr ""
+"<strong>%1$s</strong> tot <strong class=\"increment\">%2$s</strong> van "
+"<strong class=\"increment\">%3$s</strong> URL’s weergeven"
+
+#: admin/index.php:256
 #, php-format
 msgid "counting <strong>1</strong> click"
 msgid_plural "counting <strong>%s</strong> clicks"
 msgstr[0] "<strong>1</strong> click aan het tellen"
 msgstr[1] "<strong>%s</strong> clicks aan het tellen"
 
-#: admin/index.php:251
+#: admin/index.php:260
 #, php-format
-msgid "Overall, tracking <strong class=\"increment\">%1$s</strong> links, <strong>%2$s</strong> clicks, and counting!"
-msgstr "Tot nu toe <strong class=\"increment\">%1$s</strong> links gevolgd, <strong>%2$s</strong> clicks en het aantal blijft stijgen!"
+msgid ""
+"Overall, tracking <strong class=\"increment\">%1$s</strong> links, "
+"<strong>%2$s</strong> clicks, and counting!"
+msgstr ""
+"Tot nu toe <strong class=\"increment\">%1$s</strong> links gevolgd, "
+"<strong>%2$s</strong> clicks en het aantal blijft stijgen!"
 
-#: admin/index.php:312
+#: admin/index.php:321
 msgid "No URL"
 msgstr "Geen URL"
 
@@ -69,8 +86,13 @@ msgid "File <tt>.htaccess</tt> successfully created/updated."
 msgstr "<tt>.htaccess</tt> bestand succesvol aangemaakt/geüpdatet."
 
 #: admin/install.php:41
-msgid "Could not write file <tt>.htaccess</tt> in YOURLS root directory. You will have to do it manually. See <a href=\"http://yourls.org/htaccess\">how</a>."
-msgstr "Kon niet naar <tt>.htaccess</tt> bestand schrijven in YOURLS hoofd-directory. Je zult het handmatig moeten doen. Bekijk <a href=\"http://yourls.org/htaccess\">hoe je dit doet</a>."
+msgid ""
+"Could not write file <tt>.htaccess</tt> in YOURLS root directory. You will "
+"have to do it manually. See <a href=\"http://yourls.org/htaccess\">how</a>."
+msgstr ""
+"Kon niet naar <tt>.htaccess</tt> bestand schrijven in YOURLS hoofd-"
+"directory. Je zult het handmatig moeten doen. Bekijk <a href=\"http://"
+"yourls.org/htaccess\">hoe je dit doet</a>."
 
 #: admin/install.php:54 admin/install.php:75
 msgid "Install YOURLS"
@@ -96,7 +118,7 @@ msgstr "Plugin is geactiveerd"
 msgid "Plugin has been deactivated"
 msgstr "Plugin is gedeactiveerd"
 
-#: admin/plugins.php:60 includes/functions-html.php:818
+#: admin/plugins.php:60 includes/functions-html.php:852
 msgid "Manage Plugins"
 msgstr "Plugins beheren"
 
@@ -113,8 +135,12 @@ msgstr[1] "%s-plugins"
 
 #: admin/plugins.php:77
 #, php-format
-msgid "You currently have <strong>%1$s</strong> installed, and <strong>%2$s</strong> activated"
-msgstr "Je hebt momenteel <strong>%1$s</strong> geïnstalleerd en <strong>%2$s</strong> geactiveerd"
+msgid ""
+"You currently have <strong>%1$s</strong> installed, and <strong>%2$s</"
+"strong> activated"
+msgstr ""
+"Je hebt momenteel <strong>%1$s</strong> geïnstalleerd en <strong>%2$s</"
+"strong> geactiveerd"
 
 #: admin/plugins.php:82
 msgid "Plugin Name"
@@ -140,34 +166,45 @@ msgstr "Actie"
 msgid "(no info)"
 msgstr "(geen informatie)"
 
-#: admin/plugins.php:121
+#: admin/plugins.php:125
 msgid "Deactivate"
 msgstr "Deactiveren"
 
-#: admin/plugins.php:125
+#: admin/plugins.php:129
 msgid "Activate"
 msgstr "Activeren"
 
-#: admin/plugins.php:136
+#: admin/plugins.php:140
 #, php-format
 msgid "plugin file location: %s"
 msgstr "plugin bestandslocatie: %s"
 
-#: admin/plugins.php:153
+#: admin/plugins.php:157
 msgid "Toggle active/inactive plugins"
 msgstr "Actieve/inactieve plugins togglen"
 
-#: admin/plugins.php:160
-msgid "If something goes wrong after you activate a plugin and you cannot use YOURLS or access this page, simply rename or delete its directory, or rename the plugin file to something different than <code>plugin.php</code>."
-msgstr "Als er iets mis gaat nadat je een plugin hebt geactiveerd en je kunt YOURLS niet gebruiken of deze pagina niet openen, hernoem of verwijder dan gewoon de directory, of hernoem het plugin-bestand naar iets anders dan <code>plugin.php</code>."
+#: admin/plugins.php:164
+msgid ""
+"If something goes wrong after you activate a plugin and you cannot use "
+"YOURLS or access this page, simply rename or delete its directory, or rename "
+"the plugin file to something different than <code>plugin.php</code>."
+msgstr ""
+"Als er iets mis gaat nadat je een plugin hebt geactiveerd en je kunt YOURLS "
+"niet gebruiken of deze pagina niet openen, hernoem of verwijder dan gewoon "
+"de directory, of hernoem het plugin-bestand naar iets anders dan "
+"<code>plugin.php</code>."
 
-#: admin/plugins.php:162
+#: admin/plugins.php:166
 msgid "More plugins"
 msgstr "Meer plug-ins"
 
-#: admin/plugins.php:164
-msgid "For more plugins, head to the official <a href=\"http://yourls.org/awesome\">Plugin list</a>."
-msgstr "Ga voor meer plugins naar de officiële <a href=\"http://yourls.org/awesome\">plugin lijst</a>."
+#: admin/plugins.php:168
+msgid ""
+"For more plugins, head to the official <a href=\"http://yourls.org/"
+"awesome\">Plugin list</a>."
+msgstr ""
+"Ga voor meer plugins naar de officiële <a href=\"http://yourls.org/"
+"awesome\">plugin lijst</a>."
 
 #: admin/tools.php:6
 msgid "Cool YOURLS Tools"
@@ -178,36 +215,70 @@ msgid "Bookmarklets"
 msgstr "Bookmarklets"
 
 #: admin/tools.php:15
-msgid "YOURLS comes with handy <span>bookmarklets</span> for easier link shortening and sharing."
-msgstr "YOURLS heeft handige <span>bookmarklets</span> voor het eenvoudiger verkorten en delen van links."
+msgid ""
+"YOURLS comes with handy <span>bookmarklets</span> for easier link shortening "
+"and sharing."
+msgstr ""
+"YOURLS heeft handige <span>bookmarklets</span> voor het eenvoudiger "
+"verkorten en delen van links."
 
 #: admin/tools.php:17
 msgid "Standard or Instant, Simple or Custom"
 msgstr "Standaard of Direct, Eenvoudig of Aangepast"
 
 #: admin/tools.php:20
-msgid "The <span>Standard Bookmarklets</span> will take you to a page where you can easily edit or delete your brand new short URL."
-msgstr "De <span>Standaard bookmarklets</span> brengen je naar een pagina waar je gemakkelijk je gloednieuwe verkorte URL kunt bewerken of verwijderen."
+msgid ""
+"The <span>Standard Bookmarklets</span> will take you to a page where you can "
+"easily edit or delete your brand new short URL."
+msgstr ""
+"De <span>Standaard bookmarklets</span> brengen je naar een pagina waar je "
+"gemakkelijk je gloednieuwe verkorte URL kunt bewerken of verwijderen."
 
 #: admin/tools.php:22
-msgid "The <span>Instant Bookmarklets</span> will pop the short URL without leaving the page you are viewing (depending on the page and server configuration, they may silently fail)"
-msgstr "De <span>Directe bookmarklets</span> laten de verkorte URL verschijnen, zonder de pagina die je bekijkt te verlaten (afhankelijk van de pagina en serverconfiguratie kunnen ze stilletjes mislukken)"
+msgid ""
+"The <span>Instant Bookmarklets</span> will pop the short URL without leaving "
+"the page you are viewing (depending on the page and server configuration, "
+"they may silently fail)"
+msgstr ""
+"De <span>Directe bookmarklets</span> laten de verkorte URL verschijnen, "
+"zonder de pagina die je bekijkt te verlaten (afhankelijk van de pagina en "
+"serverconfiguratie kunnen ze stilletjes mislukken)"
 
 #: admin/tools.php:24
-msgid "The <span>Simple Bookmarklets</span> will generate a short URL with a random or sequential keyword."
-msgstr "De <span>Eenvoudige bookmarklets</span> genereren een verkorte URL met een willekeurig of opeenvolgend trefwoord."
+msgid ""
+"The <span>Simple Bookmarklets</span> will generate a short URL with a random "
+"or sequential keyword."
+msgstr ""
+"De <span>Eenvoudige bookmarklets</span> genereren een verkorte URL met een "
+"willekeurig of opeenvolgend trefwoord."
 
 #: admin/tools.php:26
-msgid "The <span>Custom Keyword Bookmarklets</span> will prompt you for a custom keyword first."
-msgstr "De <span>Aangepaste trefwoord bookmarklets</span> vragen je eerst om een aangepast trefwoord."
+msgid ""
+"The <span>Custom Keyword Bookmarklets</span> will prompt you for a custom "
+"keyword first."
+msgstr ""
+"De <span>Aangepaste trefwoord bookmarklets</span> vragen je eerst om een "
+"aangepast trefwoord."
 
 #: admin/tools.php:30
-msgid "If you want to share a description along with the link you're shortening, simply <span>select text</span> on the page you're viewing before clicking on your bookmarklet link"
-msgstr "Als je een beschrijving wilt delen met de link die je aan het verkorten bent, <span>selecteer dan tekst</span> op de pagina die je bekijkt voordat je op de link van je bookmarklet klikt"
+msgid ""
+"If you want to share a description along with the link you're shortening, "
+"simply <span>select text</span> on the page you're viewing before clicking "
+"on your bookmarklet link"
+msgstr ""
+"Als je een beschrijving wilt delen met de link die je aan het verkorten "
+"bent, <span>selecteer dan tekst</span> op de pagina die je bekijkt voordat "
+"je op de link van je bookmarklet klikt"
 
 #: admin/tools.php:33
-msgid "<strong>Important Note:</strong> bookmarklets <span>may fail</span> on websites with <em>https</em>, especially the \"Instant\" bookrmarklets. There is nothing you can do about this."
-msgstr "<strong>Belangrijke opmerking:</strong> bookmarklets <span>kunnen mislukken</span> op websites met <em>https</em>, vooral de \"Directe\" bookmarklets. Hier kun je niets aan doen."
+msgid ""
+"<strong>Important Note:</strong> bookmarklets <span>may fail</span> on "
+"websites with <em>https</em>, especially the \"Instant\" bookrmarklets. "
+"There is nothing you can do about this."
+msgstr ""
+"<strong>Belangrijke opmerking:</strong> bookmarklets <span>kunnen mislukken</"
+"span> op websites met <em>https</em>, vooral de \"Directe\" bookmarklets. "
+"Hier kun je niets aan doen."
 
 #: admin/tools.php:35
 msgid "The Bookmarklets"
@@ -215,7 +286,9 @@ msgstr "De bookmarklets"
 
 #: admin/tools.php:39 admin/tools.php:188
 msgid "Click and drag links to your toolbar (or right-click and bookmark it)"
-msgstr "Klik en sleep links naar je werkbalk (of klik met de rechtermuisknop en maak er een bladwijzer van)"
+msgstr ""
+"Klik en sleep links naar je werkbalk (of klik met de rechtermuisknop en maak "
+"er een bladwijzer van)"
 
 #: admin/tools.php:45
 msgid "Standard (new page)"
@@ -255,7 +328,8 @@ msgstr "Sociale bookmarklets"
 
 #: admin/tools.php:187
 msgid "Create a short URL and share it on social networks, all in one click!"
-msgstr "Maak een verkorte URL en deel deze op sociale netwerken, alles in één klik!"
+msgstr ""
+"Maak een verkorte URL en deel deze op sociale netwerken, alles in één klik!"
 
 #: admin/tools.php:190
 msgid "Shorten and share:"
@@ -279,12 +353,20 @@ msgstr "Voorvoegsel-en-verkorten"
 
 #: admin/tools.php:287
 #, php-format
-msgid "When viewing a page, you can also prefix its full URL: just head to your browser's address bar, add \"<span>%s</span>\" to the beginning of the current URL (right before its 'http://' part) and hit enter."
-msgstr "Als je een pagina bekijkt, kun je ook de volledige URL prefixen. Ga gewoon naar de adresbalk van je browser, voeg \"<span>%s</span>\" toe aan het begin van de huidige URL (vlak voor het 'http://'-gedeelte) en druk op enter."
+msgid ""
+"When viewing a page, you can also prefix its full URL: just head to your "
+"browser's address bar, add \"<span>%s</span>\" to the beginning of the "
+"current URL (right before its 'http://' part) and hit enter."
+msgstr ""
+"Als je een pagina bekijkt, kun je ook de volledige URL prefixen. Ga gewoon "
+"naar de adresbalk van je browser, voeg \"<span>%s</span>\" toe aan het begin "
+"van de huidige URL (vlak voor het 'http://'-gedeelte) en druk op enter."
 
 #: admin/tools.php:290
-msgid "Note: this will probably not work if your web server is running on Windows"
-msgstr "Opmerking: dit werkt waarschijnlijk niet als je webserver op Windows draait"
+msgid ""
+"Note: this will probably not work if your web server is running on Windows"
+msgstr ""
+"Opmerking: dit werkt waarschijnlijk niet als je webserver op Windows draait"
 
 #: admin/tools.php:292
 msgid " (which seems to be the case here)"
@@ -295,12 +377,22 @@ msgid "Secure passwordless API call"
 msgstr "Beveiligde API-aanroep zonder wachtwoord"
 
 #: admin/tools.php:301
-msgid "YOURLS allows API calls the old fashioned way, using <tt>username</tt> and <tt>password</tt> parameters."
-msgstr "YOURLS staat ouderwetse API-calls toe, middels de <tt>username</tt> and <tt>password</tt> parameters."
+msgid ""
+"YOURLS allows API calls the old fashioned way, using <tt>username</tt> and "
+"<tt>password</tt> parameters."
+msgstr ""
+"YOURLS staat ouderwetse API-calls toe, middels de <tt>username</tt> and "
+"<tt>password</tt> parameters."
 
 #: admin/tools.php:303
-msgid "If you're worried about sending your credentials into the wild, you can also make API calls without using your login or your password, using a secret signature token."
-msgstr "Als je je zorgen maakt over het openbaar maken van je gegevens, kun je ook API-aanroepen doen zonder je login of wachtwoord te gebruiken, met behulp van een geheim 'signature token'."
+msgid ""
+"If you're worried about sending your credentials into the wild, you can also "
+"make API calls without using your login or your password, using a secret "
+"signature token."
+msgstr ""
+"Als je je zorgen maakt over het openbaar maken van je gegevens, kun je ook "
+"API-aanroepen doen zonder je login of wachtwoord te gebruiken, met behulp "
+"van een geheim 'signature token'."
 
 #: admin/tools.php:306
 #, php-format
@@ -312,8 +404,12 @@ msgid "(It's a secret. Keep it secret) "
 msgstr "(Het is een geheim. Dus houdt het geheim) "
 
 #: admin/tools.php:309
-msgid "This signature token can only be used with the API, not with the admin interface."
-msgstr "Dit 'signature token' kan alleen worden gebruikt met de API, niet met de beheerinterface."
+msgid ""
+"This signature token can only be used with the API, not with the admin "
+"interface."
+msgstr ""
+"Dit 'signature token' kan alleen worden gebruikt met de API, niet met de "
+"beheerinterface."
 
 #: admin/tools.php:312
 msgid "Usage of the signature token"
@@ -321,7 +417,9 @@ msgstr "Gebruik van het 'signature token'"
 
 #: admin/tools.php:313
 msgid "Simply use parameter <tt>signature</tt> in your API requests. Example:"
-msgstr "Gebruik gewoon de parameter <tt>signature</tt> in je API-verzoeken. Bijvoorbeeld:"
+msgstr ""
+"Gebruik gewoon de parameter <tt>signature</tt> in je API-verzoeken. "
+"Bijvoorbeeld:"
 
 #: admin/tools.php:317
 msgid "Usage of a time limited signature token"
@@ -332,8 +430,12 @@ msgid "actual value:"
 msgstr "werkelijke waarde:"
 
 #: admin/tools.php:325
-msgid "Now use parameters <tt>signature</tt> and <tt>timestamp</tt> in your API requests. Example:"
-msgstr "Gebruik nu de parameters <tt>signature</tt> en <tt>timestamp</tt> in je API-verzoeken. Bijvoorbeeld:"
+msgid ""
+"Now use parameters <tt>signature</tt> and <tt>timestamp</tt> in your API "
+"requests. Example:"
+msgstr ""
+"Gebruik nu de parameters <tt>signature</tt> en <tt>timestamp</tt> in je API-"
+"verzoeken. Bijvoorbeeld:"
 
 #: admin/tools.php:327
 msgid "Actual values:"
@@ -368,20 +470,36 @@ msgid "Your current installation needs to be upgraded."
 msgstr "Je huidige installatie moet worden geüpgraded."
 
 #: admin/upgrade.php:50
-msgid "Please, pretty please, it is recommended that you <strong>backup</strong> your database<br/>(you should do this regularly anyway)"
-msgstr "Maak alsjeblieft een <strong>back-up</strong> van je database<br/>(dit moet je sowieso regelmatig doen)."
+msgid ""
+"Please, pretty please, it is recommended that you <strong>backup</strong> "
+"your database<br/>(you should do this regularly anyway)"
+msgstr ""
+"Maak alsjeblieft een <strong>back-up</strong> van je database<br/>(dit moet "
+"je sowieso regelmatig doen)."
 
 #: admin/upgrade.php:51
-msgid "Nothing awful <em>should</em> happen, but this doesn't mean it <em>won't</em> happen, right? ;)"
-msgstr "Er <em>mag</em> niks vreselijks gebeuren, maar dat betekent niet dat het <em>niet</em> zal gebeuren, toch? ;)"
+msgid ""
+"Nothing awful <em>should</em> happen, but this doesn't mean it <em>won't</"
+"em> happen, right? ;)"
+msgstr ""
+"Er <em>zou</em> niets ergs moeten gebeuren, maar dat betekent niet dat het "
+"niet <em>kan</em> gebeuren, toch? ;)"
 
 #: admin/upgrade.php:52
-msgid "On every step, if <span class='error'>something goes wrong</span>, you'll see a message and hopefully a way to fix."
-msgstr "Als er bij elke stap <span class='error'>iets fout gaat</span>, zie je een bericht en hopelijk een manier om het op te lossen."
+msgid ""
+"On every step, if <span class='error'>something goes wrong</span>, you'll "
+"see a message and hopefully a way to fix."
+msgstr ""
+"Als er bij elke stap <span class='error'>iets fout gaat</span>, zie je een "
+"bericht en hopelijk een manier om het op te lossen."
 
 #: admin/upgrade.php:53
-msgid "If everything goes too fast and you cannot read, <span class=\"success\">good for you</span>, let it go :)"
-msgstr "Als alles te snel gaat en je niet kunt lezen, <span class=\"success\">fijn voor jou</span>, laat het gaan :)"
+msgid ""
+"If everything goes too fast and you cannot read, <span "
+"class=\"success\">good for you</span>, let it go :)"
+msgstr ""
+"Als alles te snel gaat en je kunt niet lezen, <span class=\"success\">dan is "
+"dat prima</span>, laat het dan maar gaan :)"
 
 #: admin/upgrade.php:54
 msgid "Once you are ready, press \"Upgrade\" !"
@@ -402,29 +520,32 @@ msgstr "Ga terug naar <a href=\"%s\">de beheerinterface</a>"
 
 #: includes/Database/YDB.php:168
 msgid "Incorrect DB config, or could not connect to DB"
-msgstr "Onjuiste database configuratie of kan geen verbinding maken met database"
+msgstr ""
+"Onjuiste database configuratie of kan geen verbinding maken met database"
 
-#: includes/Database/YDB.php:170 includes/class-mysql.php:17
+#: includes/Database/YDB.php:170 includes/class-mysql.php:18
 msgid "Fatal error"
 msgstr "Fatale fout"
 
-#: includes/Views/AdminParams.php:60 includes/functions-html.php:242
+#: includes/Views/AdminParams.php:60 includes/functions-html.php:274
 msgid "All fields"
 msgstr "Alle velden"
 
-#: includes/Views/AdminParams.php:61 includes/functions-html.php:243
-#: includes/functions-html.php:255 includes/functions-html.php:529
-#: includes/functions-html.php:675 yourls-infos.php:219
+#: includes/Views/AdminParams.php:61 includes/functions-html.php:223
+#: includes/functions-html.php:275 includes/functions-html.php:287
+#: includes/functions-html.php:561 includes/functions-html.php:707
+#: yourls-infos.php:223
 msgid "Short URL"
 msgstr "Verkorte URL"
 
-#: includes/Views/AdminParams.php:62 includes/functions-html.php:244
-#: includes/functions-html.php:256
+#: includes/Views/AdminParams.php:62 includes/functions-html.php:225
+#: includes/functions-html.php:276 includes/functions-html.php:288
 msgid "URL"
 msgstr "URL"
 
-#: includes/Views/AdminParams.php:63 includes/functions-html.php:245
-#: includes/functions-html.php:257 includes/functions-html.php:529
+#: includes/Views/AdminParams.php:63 includes/functions-html.php:224
+#: includes/functions-html.php:277 includes/functions-html.php:289
+#: includes/functions-html.php:561
 msgid "Title"
 msgstr "Titel"
 
@@ -432,13 +553,13 @@ msgstr "Titel"
 msgid "IP Address"
 msgstr "IP-adres"
 
-#: includes/Views/AdminParams.php:65 includes/functions-html.php:258
-#: includes/functions-html.php:677
+#: includes/Views/AdminParams.php:65 includes/functions-html.php:290
+#: includes/functions-html.php:709
 msgid "Date"
 msgstr "Datum"
 
-#: includes/Views/AdminParams.php:66 includes/functions-html.php:260
-#: includes/functions-html.php:679
+#: includes/Views/AdminParams.php:66 includes/functions-html.php:292
+#: includes/functions-html.php:711
 msgid "Clicks"
 msgstr "Clicks"
 
@@ -450,14 +571,14 @@ msgstr "Kan wachtwoorden niet automatisch versleutelen. Fout was: “%s”."
 #: includes/auth.php:55
 #, php-format
 msgid "<a href=\"%s\">Get help</a>."
-msgstr "<a href=\"%s\">Krijg hulp</a>."
+msgstr "<a href=\"%s\">Verkrijg hulp</a>."
 
 #: includes/auth.php:57
 #, php-format
 msgid "<a href=\"%s\">Click here</a> to dismiss this message for one week."
 msgstr "<a href=\"%s\">Klik hier</a> om dit bericht een week lang te negeren."
 
-#: includes/class-mysql.php:17
+#: includes/class-mysql.php:18
 msgid "Incorrect DB config, please refer to documentation"
 msgstr "Onjuiste database configuratie, raadpleeg de documentatie"
 
@@ -481,588 +602,607 @@ msgstr "Fout"
 msgid "Unauthorized action or expired link"
 msgstr "Niet-geautoriseerde actie of verlopen link"
 
-#: includes/functions-html.php:147
+#: includes/functions-html.php:151
 #, php-format
 msgid "1 query"
 msgid_plural "%s queries"
 msgstr[0] "1 zoekopdracht"
 msgstr[1] "%s zoekopdrachten"
 
-#: includes/functions-html.php:156
+#: includes/functions-html.php:160
 #, php-format
 msgid "Powered by %s"
 msgstr "Mogelijk gemaakt door %s"
 
-#: includes/functions-html.php:190
+#: includes/functions-html.php:194
 msgid "Enter the URL"
-msgstr "Voer het URL-adres in"
+msgstr "Voer de URL in"
 
-#: includes/functions-html.php:192
+#: includes/functions-html.php:196
 msgid "Custom short URL"
 msgstr "Aangepaste verkorte URL"
 
-#: includes/functions-html.php:192
+#: includes/functions-html.php:196
 msgid "Optional "
 msgstr "Optioneel "
 
-#: includes/functions-html.php:195
+#: includes/functions-html.php:199
 msgid "Shorten The URL"
-msgstr "De URL verkorten"
+msgstr "Verkort de URL"
 
-#: includes/functions-html.php:240
+#: includes/functions-html.php:219
+msgid "Delete confirmation"
+msgstr "Bevestig verwijderen"
+
+#: includes/functions-html.php:221
+msgid "Really delete?"
+msgstr "Wil je echt verwijderen?"
+
+#: includes/functions-html.php:229 includes/functions-html.php:623
+#: includes/functions-html.php:624
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: includes/functions-html.php:230 includes/functions-html.php:561
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: includes/functions-html.php:272
 msgid "Search for"
 msgstr "Zoeken naar"
 
-#: includes/functions-html.php:246 includes/functions-html.php:259
-#: includes/functions-html.php:678
+#: includes/functions-html.php:278 includes/functions-html.php:291
+#: includes/functions-html.php:710
 msgid "IP"
 msgstr "IP"
 
-#: includes/functions-html.php:248
+#: includes/functions-html.php:280
 msgid "Search in"
 msgstr "Zoeken in"
 
-#: includes/functions-html.php:250
+#: includes/functions-html.php:282
 #, php-format
 msgid "Search for %1$s in %2$s"
 msgstr "Zoek naar %1$s in %2$s"
 
-#: includes/functions-html.php:262
+#: includes/functions-html.php:294
 msgid "Sort by"
 msgstr "Sorteren op"
 
-#: includes/functions-html.php:265
+#: includes/functions-html.php:297
 msgid "Ascending"
 msgstr "Oplopend"
 
-#: includes/functions-html.php:266
+#: includes/functions-html.php:298
 msgid "Descending"
 msgstr "Aflopend"
 
-#: includes/functions-html.php:268
+#: includes/functions-html.php:300
 msgid "Sort order"
 msgstr "Sorteervolgorde"
 
-#: includes/functions-html.php:270
+#: includes/functions-html.php:302
 #, php-format
 msgid "Order by %1$s %2$s"
 msgstr "Volgorde op %1$s %2$s"
 
-#: includes/functions-html.php:275
+#: includes/functions-html.php:307
 msgid "Number of rows to show"
 msgstr "Aantal rijen om weer te geven"
 
-#: includes/functions-html.php:276
+#: includes/functions-html.php:308
 #, php-format
 msgid "Show %s rows"
 msgstr "%s rijen weergeven"
 
-#: includes/functions-html.php:281
+#: includes/functions-html.php:313
 msgid "more"
 msgstr "meer"
 
-#: includes/functions-html.php:282
+#: includes/functions-html.php:314
 msgid "less"
 msgstr "minder"
 
-#: includes/functions-html.php:284
+#: includes/functions-html.php:316
 msgid "Show links with"
 msgstr "Links weergeven met"
 
-#: includes/functions-html.php:285
+#: includes/functions-html.php:317
 msgid "Number of clicks"
 msgstr "Aantal clicks"
 
-#: includes/functions-html.php:287
+#: includes/functions-html.php:319
 #, php-format
 msgid "Show links with %1$s than %2$s clicks"
 msgstr "Links weergeven met %1$s dan %2$s clicks"
 
-#: includes/functions-html.php:292
+#: includes/functions-html.php:324
 msgid "before"
 msgstr "voor"
 
-#: includes/functions-html.php:293
+#: includes/functions-html.php:325
 msgid "after"
 msgstr "na"
 
-#: includes/functions-html.php:294
+#: includes/functions-html.php:326
 msgid "between"
 msgstr "tussen"
 
-#: includes/functions-html.php:296
+#: includes/functions-html.php:328
 msgid "Show links created"
 msgstr "Aangemaakte links weergeven"
 
-#: includes/functions-html.php:297
+#: includes/functions-html.php:329
 msgid "Select a date"
 msgstr "Selecteer een datum"
 
-#: includes/functions-html.php:299
+#: includes/functions-html.php:331
 msgid "Select an end date"
 msgstr "Selecteer een einddatum"
 
-#: includes/functions-html.php:301
+#: includes/functions-html.php:333
 #, php-format
 msgid "Show links created %1$s %2$s %3$s %4$s"
 msgstr "Gemaakte links weergeven %1$s %2$s %3$s %4$s"
 
-#: includes/functions-html.php:305
+#: includes/functions-html.php:337
 msgid "Search"
 msgstr "Zoeken"
 
-#: includes/functions-html.php:307
+#: includes/functions-html.php:339
 msgid "Clear"
 msgstr "Wissen"
 
-#: includes/functions-html.php:327
+#: includes/functions-html.php:359
 #, php-format
 msgid "1 page"
 msgid_plural "%s pages"
 msgstr[0] "1 pagina"
 msgstr[1] "%s pagina"
 
-#: includes/functions-html.php:335
+#: includes/functions-html.php:367
 msgid "&laquo; First"
 msgstr "&laquo; Eerste"
 
-#: includes/functions-html.php:335
+#: includes/functions-html.php:367
 msgid "Go to First Page"
 msgstr "Ga naar de eerste pagina"
 
-#: includes/functions-html.php:349
+#: includes/functions-html.php:381
 msgid "Go to Last Page"
 msgstr "Ga naar de laatste pagina"
 
-#: includes/functions-html.php:349
+#: includes/functions-html.php:381
 msgid "Last &raquo;"
 msgstr "Laatste &raquo;"
 
-#: includes/functions-html.php:405
+#: includes/functions-html.php:437
 msgid "Your short link"
 msgstr "Je verkorte link"
 
-#: includes/functions-html.php:407 yourls-infos.php:550
+#: includes/functions-html.php:439 yourls-infos.php:557
 msgid "Quick Share"
 msgstr "Snel delen"
 
-#: includes/functions-html.php:439
+#: includes/functions-html.php:471
 msgid "Long link"
 msgstr "Lange link"
 
-#: includes/functions-html.php:441 includes/functions-html.php:571
-#: includes/functions-html.php:572
+#: includes/functions-html.php:473 includes/functions-html.php:603
+#: includes/functions-html.php:604
 msgid "Stats"
 msgstr "Statistieken"
 
-#: includes/functions-html.php:455
+#: includes/functions-html.php:487
 msgid "Share with"
 msgstr "Delen met"
 
-#: includes/functions-html.php:456
+#: includes/functions-html.php:488
 msgid "Tweet this!"
 msgstr "Tweet dit!"
 
-#: includes/functions-html.php:457
+#: includes/functions-html.php:489
 msgid "Share on Facebook"
 msgstr "Delen op Facebook"
 
-#: includes/functions-html.php:529
-msgid "Cancel"
-msgstr "Annuleren"
-
-#: includes/functions-html.php:529
+#: includes/functions-html.php:561
 msgid "Cancel editing"
 msgstr "Bewerken annuleren"
 
-#: includes/functions-html.php:529 yourls-infos.php:237
+#: includes/functions-html.php:561 yourls-infos.php:241
 msgid "Long URL"
 msgstr "Lange URL"
 
-#: includes/functions-html.php:529
+#: includes/functions-html.php:561
 msgid "Save"
 msgstr "Opslaan"
 
-#: includes/functions-html.php:529
+#: includes/functions-html.php:561
 msgid "Save new values"
 msgstr "Nieuwe waarden opslaan"
 
-#: includes/functions-html.php:531
+#: includes/functions-html.php:563
 msgid "Error, URL not found"
 msgstr "Fout, URL niet gevonden"
 
-#: includes/functions-html.php:577 includes/functions-html.php:578
-#: yourls-infos.php:247 yourls-infos.php:548
+#: includes/functions-html.php:609 includes/functions-html.php:610
+#: yourls-infos.php:253 yourls-infos.php:555
 msgid "Share"
 msgstr "Delen"
 
-#: includes/functions-html.php:584 includes/functions-html.php:585
+#: includes/functions-html.php:616 includes/functions-html.php:617
 msgid "Edit"
 msgstr "Bewerken"
 
-#: includes/functions-html.php:591 includes/functions-html.php:592
-msgid "Delete"
-msgstr "Verwijderen"
-
-#: includes/functions-html.php:613
+#: includes/functions-html.php:645
 msgid "Not a common link"
 msgstr "Niet een gewone link"
 
-#: includes/functions-html.php:676
+#: includes/functions-html.php:708
 msgid "Original URL"
 msgstr "Oorspronkelijke URL"
 
-#: includes/functions-html.php:680
+#: includes/functions-html.php:712
 msgid "Actions"
 msgstr "Acties"
 
-#: includes/functions-html.php:758
+#: includes/functions-html.php:791
 msgid "Username"
 msgstr "Gebruikersnaam"
 
-#: includes/functions-html.php:762
+#: includes/functions-html.php:795
 msgid "Password"
 msgstr "Wachtwoord"
 
-#: includes/functions-html.php:770
+#: includes/functions-html.php:803
 msgid "Login"
 msgstr "Login"
 
-#: includes/functions-html.php:796
+#: includes/functions-html.php:830
 #, php-format
 msgid "Hello <strong>%s</strong>"
 msgstr "Hallo <strong>%s</strong>"
 
-#: includes/functions-html.php:796
+#: includes/functions-html.php:830
 msgid "Logout"
 msgstr "Uitloggen"
 
-#: includes/functions-html.php:800
+#: includes/functions-html.php:834
 msgid "Help"
 msgstr "Help"
 
-#: includes/functions-html.php:807
+#: includes/functions-html.php:841
 msgid "Go to the admin interface"
 msgstr "Ga naar de beheerinterface"
 
-#: includes/functions-html.php:808
+#: includes/functions-html.php:842
 msgid "Admin interface"
 msgstr "Beheerinterface"
 
-#: includes/functions-html.php:814
+#: includes/functions-html.php:848
 msgid "Tools"
 msgstr "Gereedschappen"
 
-#: includes/functions-html.php:905 includes/functions-html.php:911
+#: includes/functions-html.php:939 includes/functions-html.php:945
 msgid "Not found"
 msgstr "Niet gevonden"
 
-#: includes/functions-html.php:905
+#: includes/functions-html.php:939
 #, php-format
 msgid "Page \"%1$s\" not found"
 msgstr "Pagina \"%1$s\" niet gevonden"
 
-#: includes/functions-html.php:956 includes/functions-html.php:961
+#: includes/functions-html.php:990 includes/functions-html.php:995
 msgid "Today"
 msgstr "Vandaag"
 
-#: includes/functions-html.php:957 includes/functions-html.php:962
+#: includes/functions-html.php:991 includes/functions-html.php:996
 msgid "Close"
 msgstr "Sluiten"
 
-#: includes/functions-html.php:981
+#: includes/functions-html.php:1015
 #, php-format
 msgid "<a href=\"%s\">YOURLS version %s</a> is available. Please update!"
-msgstr "<a href=\"%s\">YOURLS versie %s</a> is beschikbaar. Update alsjeblieft!"
+msgstr ""
+"<a href=\"%s\">YOURLS versie %s</a> is beschikbaar. Update alsjeblieft!"
 
-#: includes/functions-html.php:996
+#: includes/functions-html.php:1030
 msgid "Drag to your toolbar!"
 msgstr "Sleep naar je werkbalk!"
 
-#: includes/functions-install.php:263
+#: includes/functions-install.php:264
 #, php-format
 msgid "Table '%s' created."
 msgstr "Tabel '%s' aangemaakt."
 
-#: includes/functions-install.php:265
+#: includes/functions-install.php:266
 #, php-format
 msgid "Error creating table '%s'."
 msgstr "Fout bij het aanmaken van tabel '%s'."
 
-#: includes/functions-install.php:271
+#: includes/functions-install.php:272
 msgid "Could not initialize options"
 msgstr "Kon opties niet initialiseren"
 
-#: includes/functions-install.php:275
+#: includes/functions-install.php:276
 msgid "Could not insert sample short URLs"
 msgstr "Kan geen voorbeeld van verkorte URL's invoegen"
 
-#: includes/functions-install.php:279
+#: includes/functions-install.php:280
 msgid "YOURLS tables successfully created."
 msgstr "YOURLS tabellen succesvol aangemaakt."
 
-#: includes/functions-install.php:281
+#: includes/functions-install.php:282
 msgid "Error creating YOURLS tables."
 msgstr "Fout bij het maken van YOURLS tabellen."
 
-#: includes/functions-l10n.php:770 includes/functions-l10n.php:780
-#: includes/functions-l10n.php:793
+#: includes/functions-l10n.php:760 includes/functions-l10n.php:770
+#: includes/functions-l10n.php:783
 msgid "Sunday"
 msgstr "Zondag"
 
-#: includes/functions-l10n.php:771 includes/functions-l10n.php:781
-#: includes/functions-l10n.php:794
+#: includes/functions-l10n.php:761 includes/functions-l10n.php:771
+#: includes/functions-l10n.php:784
 msgid "Monday"
 msgstr "Maandag"
 
-#: includes/functions-l10n.php:772 includes/functions-l10n.php:782
-#: includes/functions-l10n.php:795
+#: includes/functions-l10n.php:762 includes/functions-l10n.php:772
+#: includes/functions-l10n.php:785
 msgid "Tuesday"
 msgstr "Dinsdag"
 
-#: includes/functions-l10n.php:773 includes/functions-l10n.php:783
-#: includes/functions-l10n.php:796
+#: includes/functions-l10n.php:763 includes/functions-l10n.php:773
+#: includes/functions-l10n.php:786
 msgid "Wednesday"
 msgstr "Woensdag"
 
-#: includes/functions-l10n.php:774 includes/functions-l10n.php:784
-#: includes/functions-l10n.php:797
+#: includes/functions-l10n.php:764 includes/functions-l10n.php:774
+#: includes/functions-l10n.php:787
 msgid "Thursday"
 msgstr "Donderdag"
 
-#: includes/functions-l10n.php:775 includes/functions-l10n.php:785
-#: includes/functions-l10n.php:798
+#: includes/functions-l10n.php:765 includes/functions-l10n.php:775
+#: includes/functions-l10n.php:788
 msgid "Friday"
 msgstr "Vrijdag"
 
-#: includes/functions-l10n.php:776 includes/functions-l10n.php:786
-#: includes/functions-l10n.php:799
+#: includes/functions-l10n.php:766 includes/functions-l10n.php:776
+#: includes/functions-l10n.php:789
 msgid "Saturday"
 msgstr "Zaterdag"
 
-#: includes/functions-l10n.php:780
+#: includes/functions-l10n.php:770
 msgid "S_Sunday_initial"
 msgstr "Zo_Zondag_initial"
 
-#: includes/functions-l10n.php:781
+#: includes/functions-l10n.php:771
 msgid "M_Monday_initial"
 msgstr "Ma_Maandag_initial"
 
-#: includes/functions-l10n.php:782
+#: includes/functions-l10n.php:772
 msgid "T_Tuesday_initial"
 msgstr "Di_Dinsdag_initial"
 
-#: includes/functions-l10n.php:783
+#: includes/functions-l10n.php:773
 msgid "W_Wednesday_initial"
 msgstr "Wo_Woensdag_initial"
 
-#: includes/functions-l10n.php:784
+#: includes/functions-l10n.php:774
 msgid "T_Thursday_initial"
 msgstr "Do_Donderdag_initial"
 
-#: includes/functions-l10n.php:785
+#: includes/functions-l10n.php:775
 msgid "F_Friday_initial"
 msgstr "Vr_Vrijdag_initial"
 
-#: includes/functions-l10n.php:786
+#: includes/functions-l10n.php:776
 msgid "S_Saturday_initial"
 msgstr "Za_Zaterdag_initial"
 
-#: includes/functions-l10n.php:793
+#: includes/functions-l10n.php:783
 msgid "Sun"
 msgstr "Zo"
 
-#: includes/functions-l10n.php:794
+#: includes/functions-l10n.php:784
 msgid "Mon"
 msgstr "Ma"
 
-#: includes/functions-l10n.php:795
+#: includes/functions-l10n.php:785
 msgid "Tue"
 msgstr "Di"
 
-#: includes/functions-l10n.php:796
+#: includes/functions-l10n.php:786
 msgid "Wed"
 msgstr "Wo"
 
-#: includes/functions-l10n.php:797
+#: includes/functions-l10n.php:787
 msgid "Thu"
 msgstr "Do"
 
-#: includes/functions-l10n.php:798
+#: includes/functions-l10n.php:788
 msgid "Fri"
 msgstr "Vr"
 
-#: includes/functions-l10n.php:799
+#: includes/functions-l10n.php:789
 msgid "Sat"
 msgstr "Zat"
 
-#: includes/functions-l10n.php:802 includes/functions-l10n.php:817
+#: includes/functions-l10n.php:792 includes/functions-l10n.php:807
 msgid "January"
 msgstr "Januari"
 
-#: includes/functions-l10n.php:803 includes/functions-l10n.php:818
+#: includes/functions-l10n.php:793 includes/functions-l10n.php:808
 msgid "February"
 msgstr "Februari"
 
-#: includes/functions-l10n.php:804 includes/functions-l10n.php:819
+#: includes/functions-l10n.php:794 includes/functions-l10n.php:809
 msgid "March"
 msgstr "Maart"
 
-#: includes/functions-l10n.php:805 includes/functions-l10n.php:820
+#: includes/functions-l10n.php:795 includes/functions-l10n.php:810
 msgid "April"
 msgstr "April"
 
-#: includes/functions-l10n.php:806 includes/functions-l10n.php:821
+#: includes/functions-l10n.php:796 includes/functions-l10n.php:811
 msgid "May"
 msgstr "Mei"
 
-#: includes/functions-l10n.php:807 includes/functions-l10n.php:822
+#: includes/functions-l10n.php:797 includes/functions-l10n.php:812
 msgid "June"
 msgstr "Juni"
 
-#: includes/functions-l10n.php:808 includes/functions-l10n.php:823
+#: includes/functions-l10n.php:798 includes/functions-l10n.php:813
 msgid "July"
 msgstr "Juli"
 
-#: includes/functions-l10n.php:809 includes/functions-l10n.php:824
+#: includes/functions-l10n.php:799 includes/functions-l10n.php:814
 msgid "August"
 msgstr "Augustus"
 
-#: includes/functions-l10n.php:810 includes/functions-l10n.php:825
+#: includes/functions-l10n.php:800 includes/functions-l10n.php:815
 msgid "September"
 msgstr "September"
 
-#: includes/functions-l10n.php:811 includes/functions-l10n.php:826
+#: includes/functions-l10n.php:801 includes/functions-l10n.php:816
 msgid "October"
 msgstr "Oktober"
 
-#: includes/functions-l10n.php:812 includes/functions-l10n.php:827
+#: includes/functions-l10n.php:802 includes/functions-l10n.php:817
 msgid "November"
 msgstr "November"
 
-#: includes/functions-l10n.php:813 includes/functions-l10n.php:828
+#: includes/functions-l10n.php:803 includes/functions-l10n.php:818
 msgid "December"
 msgstr "December"
 
-#: includes/functions-l10n.php:817
+#: includes/functions-l10n.php:807
 msgid "Jan_January_abbreviation"
 msgstr "Jan_Januari_abbreviation"
 
-#: includes/functions-l10n.php:818
+#: includes/functions-l10n.php:808
 msgid "Feb_February_abbreviation"
 msgstr "Feb_Februari_abbreviation"
 
-#: includes/functions-l10n.php:819
+#: includes/functions-l10n.php:809
 msgid "Mar_March_abbreviation"
 msgstr "Mrt_Maart_abbreviation"
 
-#: includes/functions-l10n.php:820
+#: includes/functions-l10n.php:810
 msgid "Apr_April_abbreviation"
 msgstr "Apr_April_abbreviation"
 
-#: includes/functions-l10n.php:821
+#: includes/functions-l10n.php:811
 msgid "May_May_abbreviation"
 msgstr "Mei_Mei_abbreviation"
 
-#: includes/functions-l10n.php:822
+#: includes/functions-l10n.php:812
 msgid "Jun_June_abbreviation"
 msgstr "Jun_Juni_abbreviation"
 
-#: includes/functions-l10n.php:823
+#: includes/functions-l10n.php:813
 msgid "Jul_July_abbreviation"
 msgstr "Jul_Juli_abbreviation"
 
-#: includes/functions-l10n.php:824
+#: includes/functions-l10n.php:814
 msgid "Aug_August_abbreviation"
 msgstr "Aug_Augustus_abbreviation"
 
-#: includes/functions-l10n.php:825
+#: includes/functions-l10n.php:815
 msgid "Sep_September_abbreviation"
 msgstr "Sep_September_abbreviation"
 
-#: includes/functions-l10n.php:826
+#: includes/functions-l10n.php:816
 msgid "Oct_October_abbreviation"
 msgstr "Okt_Oktober_abbreviation"
 
-#: includes/functions-l10n.php:827
+#: includes/functions-l10n.php:817
 msgid "Nov_November_abbreviation"
 msgstr "Nov_November_abbreviation"
 
-#: includes/functions-l10n.php:828
+#: includes/functions-l10n.php:818
 msgid "Dec_December_abbreviation"
 msgstr "Dec_December_abbreviation"
 
-#: includes/functions-l10n.php:835
+#: includes/functions-l10n.php:825
 msgid "am"
 msgstr "am"
 
-#: includes/functions-l10n.php:836
+#: includes/functions-l10n.php:826
 msgid "pm"
 msgstr "pm"
 
-#: includes/functions-l10n.php:837
+#: includes/functions-l10n.php:827
 msgid "AM"
 msgstr "AM"
 
-#: includes/functions-l10n.php:838
+#: includes/functions-l10n.php:828
 msgid "PM"
 msgstr "PM"
 
-#: includes/functions-l10n.php:844
+#: includes/functions-l10n.php:834
 msgid "number_format_thousands_sep"
 msgstr "number_format_thousands_sep"
 
-#: includes/functions-l10n.php:848
+#: includes/functions-l10n.php:838
 msgid "number_format_decimal_point"
 msgstr "number_format_decimal_point"
 
-#: includes/functions-l10n.php:855
+#: includes/functions-l10n.php:845
 msgid "ltr"
 msgstr "ltr"
 
-#: includes/functions-plugins.php:612
+#: includes/functions-plugins.php:608
 msgid "Could not find and deactivate plugin :"
 msgid_plural "Could not find and deactivate plugins :"
 msgstr[0] "Kan plugin niet vinden en deactiveren:"
 msgstr[1] "Kan plugins niet vinden en deactiveren:"
 
-#: includes/functions-plugins.php:652
+#: includes/functions-plugins.php:648
 msgid "Not a valid plugin file"
 msgstr "Geen geldig plugin-bestand"
 
-#: includes/functions-plugins.php:658
+#: includes/functions-plugins.php:654
 msgid "Plugin already activated"
 msgstr "Plugin al geactiveerd"
 
-#: includes/functions-plugins.php:664
+#: includes/functions-plugins.php:660
 #, php-format
 msgid "Plugin generated unexpected output. Error was: <br/><pre>%s</pre>"
 msgstr "Plugin genereerde onverwachte uitvoer. Fout was: <br/><pre>%s</pre>"
 
-#: includes/functions-plugins.php:688
+#: includes/functions-plugins.php:684
 msgid "Plugin not active"
 msgstr "Plugin niet actief"
 
-#: includes/functions-plugins.php:697
+#: includes/functions-plugins.php:693
 #, php-format
 msgid "Loading %s generated unexpected output. Error was: <br/><pre>%s</pre>"
-msgstr "Het laden van %s genereerde onverwachte uitvoer. Fout was: <br/><pre>%s</pre>"
+msgstr ""
+"Het laden van %s genereerde onverwachte uitvoer. Fout was: <br/><pre>%s</pre>"
 
-#: includes/functions-plugins.php:788
+#: includes/functions-plugins.php:784
 msgid "Invalid link"
 msgstr "Ongeldige link"
 
-#: includes/functions-plugins.php:788
-msgid "This page does not exist. Maybe a plugin you thought was activated is inactive?"
-msgstr "Deze pagina bestaat niet. Misschien is een plugin waarvan je dacht dat deze geactiveerd was, inactief?"
+#: includes/functions-plugins.php:784
+msgid ""
+"This page does not exist. Maybe a plugin you thought was activated is "
+"inactive?"
+msgstr ""
+"Deze pagina bestaat niet. Misschien is een plugin waarvan je dacht dat deze "
+"geactiveerd was, inactief?"
 
-#: includes/functions-plugins.php:794
+#: includes/functions-plugins.php:790
 msgid "Invalid code"
 msgstr "Ongeldige code"
 
-#: includes/functions-plugins.php:794
-msgid "This page cannot be displayed because the displaying function is not callable."
-msgstr "Deze pagina kan niet worden weergegeven omdat de weergavefunctie niet aanroepbaar is."
+#: includes/functions-plugins.php:790
+msgid ""
+"This page cannot be displayed because the displaying function is not "
+"callable."
+msgstr ""
+"Deze pagina kan niet worden weergegeven omdat de weergavefunctie niet "
+"aanroepbaar is."
 
 #: includes/functions-shorturls.php:56
 msgid "Missing or malformed URL"
@@ -1091,234 +1231,254 @@ msgstr "%s toegevoegd aan database"
 msgid "Error saving url to database"
 msgstr "Fout bij het opslaan van URL in database"
 
-#: includes/functions-shorturls.php:332
+#: includes/functions-shorturls.php:354
 msgid "Long URL or Short URL cannot be blank"
 msgstr "Lange of verkorte URL mag niet leeg zijn"
 
-#: includes/functions-shorturls.php:368
+#: includes/functions-shorturls.php:390
 msgid "Link updated in database"
 msgstr "Link geüpdatet in database"
 
-#: includes/functions-shorturls.php:371
+#: includes/functions-shorturls.php:397
 #, php-format
 msgid "Error updating %s (Short URL: %s)"
 msgstr "Fout tijdens bijwerken %s (Verkorte URL: %s)"
 
-#: includes/functions-shorturls.php:377
+#: includes/functions-shorturls.php:403
 msgid "URL or keyword already exists in database"
 msgstr "URL of trefwoord bestaat al in database"
 
-#: includes/functions.php:403
+#: includes/functions.php:423
 #, php-format
-msgid "if you are not redirected after 10 seconds, please <a href=\"%s\">click here</a>"
-msgstr "als je na 10 seconden niet wordt doorgestuurd, <a href=\"%s\">klik dan hier</a>"
+msgid ""
+"if you are not redirected after 10 seconds, please <a href=\"%s\">click "
+"here</a>"
+msgstr ""
+"als je na 10 seconden niet wordt doorgestuurd, <a href=\"%s\">klik dan hier</"
+"a>"
 
-#: includes/functions.php:412
+#: includes/functions.php:432
 #, php-format
 msgid "Please <a href=\"%s\">click here</a>"
 msgstr "<a href=\"%s\">Klik hier</a>"
 
-#: includes/functions.php:668
+#: includes/functions.php:688
 msgid "Too Many Requests"
 msgstr "Teveel verzoeken"
 
-#: includes/functions.php:668
+#: includes/functions.php:688
 msgid "Too many URLs added too fast. Slow down please."
 msgstr "Te veel URL's te snel toegevoegd. Langzamer alsjeblieft."
 
-#: includes/functions.php:1116
+#: includes/functions.php:1156
 msgid "Service temporarily unavailable"
 msgstr "Service tijdelijk niet beschikbaar"
 
-#: includes/functions.php:1117
+#: includes/functions.php:1157
 msgid "Our service is currently undergoing scheduled maintenance."
 msgstr "Onze service ondergaat momenteel gepland onderhoud."
 
-#: includes/functions.php:1118
-msgid "Things should not last very long, thank you for your patience and please excuse the inconvenience"
-msgstr "Het zal niet lang meer duren, bedankt voor jullie geduld en excuses voor het ongemak"
+#: includes/functions.php:1158
+msgid ""
+"Things should not last very long, thank you for your patience and please "
+"excuse the inconvenience"
+msgstr ""
+"Het zal niet lang meer duren, bedankt voor jullie geduld en excuses voor het "
+"ongemak"
 
-#: includes/functions.php:1227
+#: includes/functions.php:1263
 #, php-format
-msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
-msgstr "%1$s is <strong>verouderd</strong> sinds versie %2$s! Gebruik in plaats daarvan %3$s."
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
+msgstr ""
+"%1$s is <strong>verouderd</strong> sinds versie %2$s! Gebruik in plaats "
+"daarvan %3$s."
 
-#: includes/functions.php:1229
+#: includes/functions.php:1265
 #, php-format
-msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
-msgstr "%1$s is <strong>verouderd</strong> sinds versie %2$s zonder beschikbaar alternatief."
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s with no alternative "
+"available."
+msgstr ""
+"%1$s is <strong>verouderd</strong> sinds versie %2$s zonder beschikbaar "
+"alternatief."
 
-#: yourls-infos.php:212
+#: yourls-infos.php:216
 #, php-format
 msgid "Statistics for %s"
 msgstr "Statistieken voor %s"
 
-#: yourls-infos.php:235
+#: yourls-infos.php:239
 msgid "Aggregate stats for duplicate short URLs"
 msgstr "Verzamel statistieken voor dubbele verkorte URL's"
 
-#: yourls-infos.php:243 yourls-infos.php:254
+#: yourls-infos.php:247 yourls-infos.php:260
 msgid "Traffic statistics"
 msgstr "Verkeersstatistieken"
 
-#: yourls-infos.php:244 yourls-infos.php:441
+#: yourls-infos.php:248 yourls-infos.php:447
 msgid "Traffic location"
 msgstr "Verkeerslocatie"
 
-#: yourls-infos.php:245 yourls-infos.php:478
+#: yourls-infos.php:250 yourls-infos.php:484
 msgid "Traffic sources"
 msgstr "Verkeersbronnen"
 
-#: yourls-infos.php:262 yourls-infos.php:302
+#: yourls-infos.php:268 yourls-infos.php:308
 msgid "Last 24 hours"
 msgstr "Laatste 24 uur"
 
-#: yourls-infos.php:263 yourls-infos.php:304
+#: yourls-infos.php:269 yourls-infos.php:310
 msgid "Last 7 days"
 msgstr "Laatste 7 dagen"
 
-#: yourls-infos.php:264 yourls-infos.php:306
+#: yourls-infos.php:270 yourls-infos.php:312
 msgid "Last 30 days"
 msgstr "Laatste 30 dagen"
 
-#: yourls-infos.php:265 yourls-infos.php:308
+#: yourls-infos.php:271 yourls-infos.php:314
 msgid "All time"
 msgstr "Altijd"
 
-#: yourls-infos.php:317
+#: yourls-infos.php:323
 #, php-format
 msgid "Number of hits : %s"
 msgstr "Aantal hits : %s"
 
-#: yourls-infos.php:340
+#: yourls-infos.php:346
 msgid "Historical click count"
 msgstr "Historisch aantal clicks"
 
-#: yourls-infos.php:347
+#: yourls-infos.php:353
 #, php-format
 msgid "about 1 day ago"
 msgid_plural "about %s days ago"
 msgstr[0] "ongeveer 1 dag geleden"
 msgstr[1] "ongeveer %s dagen geleden"
 
-#: yourls-infos.php:350
+#: yourls-infos.php:356
 #, php-format
 msgid "Short URL created on %s"
 msgstr "Verkorte URL aangemaakt op %s"
 
-#: yourls-infos.php:365 yourls-infos.php:372
+#: yourls-infos.php:371 yourls-infos.php:378
 #, php-format
 msgid "%s per day"
 msgstr "%s per dag"
 
-#: yourls-infos.php:368
+#: yourls-infos.php:374
 #, php-format
 msgid "%s per hour"
 msgstr "%s per uur"
 
-#: yourls-infos.php:375
+#: yourls-infos.php:381
 #, php-format
 msgid "%s hit"
 msgid_plural "%s hits"
 msgstr[0] "%s hit"
 msgstr[1] "%s hits"
 
-#: yourls-infos.php:382
+#: yourls-infos.php:388
 msgid "Best day"
 msgstr "Beste dag"
 
-#: yourls-infos.php:389
+#: yourls-infos.php:395
 #, php-format
 msgid "<strong>%1$s</strong> hit on %2$s"
 msgid_plural "<strong>%1$s</strong> hits on %2$s"
 msgstr[0] "<strong>%1$s</strong> hit op %2$s"
 msgstr[1] "<strong>%1$s</strong> hits op %2$s"
 
-#: yourls-infos.php:390 yourls-infos.php:452
+#: yourls-infos.php:396 yourls-infos.php:458
 msgid "Click for more details"
 msgstr "Klik voor meer gegevens"
 
-#: yourls-infos.php:396 yourls-infos.php:399
+#: yourls-infos.php:402 yourls-infos.php:405
 #, php-format
 msgid "Year %s"
 msgstr "Jaar: %s"
 
-#: yourls-infos.php:418 yourls-infos.php:456
+#: yourls-infos.php:424 yourls-infos.php:462
 #, php-format
 msgid "1 hit"
 msgid_plural "%s hits"
 msgstr[0] "1 hit"
 msgstr[1] "%s hits"
 
-#: yourls-infos.php:435
+#: yourls-infos.php:441
 msgid "No traffic yet. Get some clicks first!"
-msgstr "Nog geen verkeer. Krijg eerst wat clicks!"
+msgstr "Nog geen verkeer. Verkrijg eerst wat clicks!"
 
-#: yourls-infos.php:450
+#: yourls-infos.php:456
 msgid "Top 5 countries"
 msgstr "Top 5 landen"
 
-#: yourls-infos.php:463
+#: yourls-infos.php:469
 msgid "Overall traffic"
 msgstr "Algemeen verkeer"
 
-#: yourls-infos.php:472
+#: yourls-infos.php:478
 msgid "No country data."
 msgstr "Geen landgegevens."
 
-#: yourls-infos.php:487
+#: yourls-infos.php:493
 msgid "Referrer shares"
 msgstr "Verwijzers delen"
 
-#: yourls-infos.php:490 yourls-infos.php:492
+#: yourls-infos.php:496 yourls-infos.php:498
 msgid "Others"
 msgstr "Overige"
 
-#: yourls-infos.php:494 yourls-infos.php:527
+#: yourls-infos.php:500 yourls-infos.php:533
 msgid "Referrers"
 msgstr "Verwijzers"
 
-#: yourls-infos.php:501 yourls-infos.php:511
+#: yourls-infos.php:507 yourls-infos.php:517
 msgid "(details)"
 msgstr "(gegevens)"
 
-#: yourls-infos.php:511
+#: yourls-infos.php:517
 msgid "Various:"
 msgstr "Verschillende:"
 
-#: yourls-infos.php:525
+#: yourls-infos.php:531
 msgid "Direct vs Referrer Traffic"
 msgstr "Direct verkeer vs. Verwijzingsverkeer"
 
-#: yourls-infos.php:527
+#: yourls-infos.php:533
 msgid "Direct"
 msgstr "Direct"
 
-#: yourls-infos.php:529 yourls-infos.php:530
+#: yourls-infos.php:535 yourls-infos.php:536
 #, php-format
 msgid "<strong>%s</strong> hit"
 msgid_plural "<strong>%s</strong> hits"
 msgstr[0] "<strong>%s</strong> hit"
 msgstr[1] "<strong>%s</strong> hits"
 
-#: yourls-infos.php:529
+#: yourls-infos.php:535
 msgid "Direct traffic:"
 msgstr "Direct verkeer:"
 
-#: yourls-infos.php:530
+#: yourls-infos.php:536
 msgid "Referrer traffic:"
 msgstr "Verwijzingsverkeer:"
 
-#: yourls-infos.php:539
+#: yourls-infos.php:545
 msgid "No referrer data."
 msgstr "Geen verwijzingsgegevens."
 
-#: yourls-infos.php:550
+#: yourls-infos.php:557
 msgid "Short link"
 msgstr "Je verkorte link"
 
-#~ msgid "YOURLS requires the mysql, mysqli or pdo_mysql PHP extension. No extension found. Check your server config, or contact your host."
-#~ msgstr "YOURLS heeft de mysql, mysqli of pdo_mysql PHP-extensie nodig. Geen extensie gevonden. Controleer de server-configuratie of neem contact op met je host."
+#~ msgid ""
+#~ "YOURLS requires the mysql, mysqli or pdo_mysql PHP extension. No "
+#~ "extension found. Check your server config, or contact your host."
+#~ msgstr ""
+#~ "YOURLS heeft de mysql, mysqli of pdo_mysql PHP-extensie nodig. Geen "
+#~ "extensie gevonden. Controleer de server-configuratie of neem contact op "
+#~ "met je host."
 
 #~ msgid "Share on Friendfeed"
 #~ msgstr "Delen op Friendfeed"
@@ -1336,14 +1496,31 @@ msgstr "Je verkorte link"
 #~ msgstr[0] "weergave"
 #~ msgstr[1] "weergaven"
 
-#~ msgid "With the Standard Bookmarklets you will also get a <span>Quick Share</span> tool box to make posting to Twitter, Facebook or Friendfeed a snap."
-#~ msgstr "Met de Standaard bookmarklets krijg je ook een <span>Snel delen</span> toolbox waarmee je in een handomdraai berichten kunt posten op Twitter, Facebook of Friendfeed."
+#~ msgid ""
+#~ "With the Standard Bookmarklets you will also get a <span>Quick Share</"
+#~ "span> tool box to make posting to Twitter, Facebook or Friendfeed a snap."
+#~ msgstr ""
+#~ "Met de Standaard bookmarklets krijg je ook een <span>Snel delen</span> "
+#~ "toolbox waarmee je in een handomdraai berichten kunt posten op Twitter, "
+#~ "Facebook of Friendfeed."
 
-#~ msgid "<strong>Notice</strong>: your password is stored as clear text in your <tt>config.php</tt>"
-#~ msgstr "<strong>Opmerking</strong>: je wachtwoord is opgeslagen in platte tekst in jouw <tt>config.php</tt>"
+#~ msgid ""
+#~ "<strong>Notice</strong>: your password is stored as clear text in your "
+#~ "<tt>config.php</tt>"
+#~ msgstr ""
+#~ "<strong>Opmerking</strong>: je wachtwoord is opgeslagen in platte tekst "
+#~ "in jouw <tt>config.php</tt>"
 
-#~ msgid "Did you know you can easily improve the security of your YOURLS install by <strong>encrypting</strong> your password?"
-#~ msgstr "Wist je dat je eenvoudig de veiligheid van je YOURLS installatie kan verbeteren door je wachtwoord te <strong>versleutelen</strong>?"
+#~ msgid ""
+#~ "Did you know you can easily improve the security of your YOURLS install "
+#~ "by <strong>encrypting</strong> your password?"
+#~ msgstr ""
+#~ "Wist je dat je eenvoudig de veiligheid van je YOURLS installatie kan "
+#~ "verbeteren door je wachtwoord te <strong>versleutelen</strong>?"
 
-#~ msgid "See <a href=\"http://yourls.org/userpassword\">UsernamePassword</a> for details"
-#~ msgstr "Ga naar <a href=\"http://yourls.org/userpassword\">UsernamePassword</a> voor informatie."
+#~ msgid ""
+#~ "See <a href=\"http://yourls.org/userpassword\">UsernamePassword</a> for "
+#~ "details"
+#~ msgstr ""
+#~ "Ga naar <a href=\"http://yourls.org/userpassword\">UsernamePassword</a> "
+#~ "voor informatie."
