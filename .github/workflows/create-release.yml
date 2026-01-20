@@ -1,4 +1,4 @@
-name: Create nl_NL Release
+name: Create YOURLS nl_NL Release
 on:
   workflow_dispatch:
 permissions:
@@ -20,6 +20,7 @@ jobs:
           # PO headers are usually like: "Project-Id-Version: YOURLS 1.10.x\n"
           PROJECT_ID="$(awk -F': ' '/^"Project-Id-Version:/{v=$2; sub(/\\n".*/,"",v); print v; exit}' nl_NL.po)"
           REV_DATE="$(awk -F': ' '/^"PO-Revision-Date:/{v=$2; sub(/\\n".*/,"",v); sub(/ .*/,"",v); print v; exit}' nl_NL.po)"
+
           if [ -z "$PROJECT_ID" ]; then
             echo "Could not parse Project-Id-Version from nl_NL.po" >&2
             exit 1
@@ -28,16 +29,20 @@ jobs:
             echo "Could not parse PO-Revision-Date from nl_NL.po" >&2
             exit 1
           fi
-          # Make a safe tag/file component: replace spaces & separators with '-', keep only safe chars
+          # Safe project id for tag/filename: replace whitespace/separators with '-', keep safe chars only
           SAFE_PROJECT_ID="$(echo "$PROJECT_ID" | tr '[:space:]/:\' '-' | tr -cd 'A-Za-z0-9._-')"
-          TAG="${SAFE_PROJECT_ID}_${REV_DATE}"
-          TITLE="${PROJECT_ID} – ${REV_DATE}"
+          SAFE_PROJECT_ID="$(echo "$SAFE_PROJECT_ID" | sed -E 's/-+/-/g; s/^-|-$//g')"
+          # Required formats:
+          # Title: "YOURLS 1.10.x nl_NL – 2026-01-20"
+          # Tag:   "YOURLS-1.10.x-nl_NL-2026-01-20"
+          TAG="${SAFE_PROJECT_ID}-nl_NL-${REV_DATE}"
+          TITLE="${PROJECT_ID} nl_NL – ${REV_DATE}"
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
           echo "title=$TITLE" >> "$GITHUB_OUTPUT"
       - name: Create zip file
         shell: bash
         run: |
-          ZIP_NAME="nl_NL_${{ steps.meta.outputs.tag }}.zip"
+          ZIP_NAME="${{ steps.meta.outputs.tag }}.zip"
           zip -j "$ZIP_NAME" nl_NL.po nl_NL.mo
           echo "ZIP_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
       - name: Create GitHub Release
