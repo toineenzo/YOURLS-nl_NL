@@ -1,0 +1,68 @@
+name: Create release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Verify nl_NL.po and nl_NL.mo exist
+        run: |
+          test -f nl_NL.po || (echo "::error::nl_NL.po is missing" && exit 1)
+          test -f nl_NL.mo || (echo "::error::nl_NL.mo is missing — run sync-and-compile first" && exit 1)
+
+      - name: Recompile nl_NL.mo from nl_NL.po
+        # Belt + braces: even if the committed .mo is stale, the release zip
+        # ships a freshly compiled one.
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends gettext
+          msgfmt --check --output-file=nl_NL.mo nl_NL.po
+
+      - name: Extract version + revision date from nl_NL.po
+        id: meta
+        shell: bash
+        run: |
+          set -euo pipefail
+          # PO header lines look like: "Project-Id-Version: YOURLS 1.10.x\n"
+          PROJECT_ID="$(awk -F': ' '/^"Project-Id-Version:/{v=$2; sub(/\\n".*/,"",v); print v; exit}' nl_NL.po)"
+          REV_DATE="$(awk -F': ' '/^"PO-Revision-Date:/{v=$2; sub(/\\n".*/,"",v); sub(/ .*/,"",v); print v; exit}' nl_NL.po)"
+
+          if [ -z "$PROJECT_ID" ]; then
+            echo "::error::Could not parse Project-Id-Version from nl_NL.po"; exit 1
+          fi
+          if [ -z "$REV_DATE" ]; then
+            echo "::error::Could not parse PO-Revision-Date from nl_NL.po"; exit 1
+          fi
+
+          # Make a tag-safe slug of the project id.
+          SAFE_PROJECT_ID="$(echo "$PROJECT_ID" | tr '[:space:]/:\\' '-' | tr -cd 'A-Za-z0-9._-' | sed -E 's/-+/-/g; s/^-|-$//g')"
+
+          TAG="${SAFE_PROJECT_ID}-nl_NL-${REV_DATE}"
+          TITLE="${PROJECT_ID} nl_NL – ${REV_DATE}"
+
+          echo "tag=$TAG"     >> "$GITHUB_OUTPUT"
+          echo "title=$TITLE" >> "$GITHUB_OUTPUT"
+          echo "Release tag:   $TAG"
+          echo "Release title: $TITLE"
+
+      - name: Create release zip
+        run: |
+          ZIP_NAME="${{ steps.meta.outputs.tag }}.zip"
+          zip -j "$ZIP_NAME" nl_NL.po nl_NL.mo
+          echo "ZIP_NAME=$ZIP_NAME" >> "$GITHUB_ENV"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: ${{ steps.meta.outputs.title }}
+          files: ${{ env.ZIP_NAME }}
+          fail_on_unmatched_files: true

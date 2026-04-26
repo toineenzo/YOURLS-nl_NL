@@ -1,0 +1,81 @@
+name: Sync upstream POT + recompile MO
+
+on:
+  schedule:
+    # Every Sunday at midnight UTC.
+    - cron: '0 0 * * 0'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'nl_NL.po'
+      - 'YOURLS.pot'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'nl_NL.po'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-and-compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout this repo
+        uses: actions/checkout@v6
+        with:
+          # Use a PAT (with `contents: write` and the `workflow` scope) so the
+          # commit pushed back from this workflow can trigger downstream
+          # workflows on `release.yml`. GITHUB_TOKEN-pushes do not.
+          token: ${{ secrets.YOURLS_POT }}
+          fetch-depth: 1
+
+      - name: Checkout upstream YOURLS/YOURLS.pot
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: actions/checkout@v6
+        with:
+          repository: YOURLS/YOURLS.pot
+          path: upstream-pot
+
+      - name: Install gettext (msgmerge / msgfmt)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends gettext
+
+      - name: Sync upstream YOURLS.pot
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: |
+          set -euo pipefail
+          if [ -f upstream-pot/YOURLS.pot ] && ! cmp -s upstream-pot/YOURLS.pot YOURLS.pot; then
+            echo "Updating YOURLS.pot from upstream..."
+            cp -f upstream-pot/YOURLS.pot YOURLS.pot
+          else
+            echo "YOURLS.pot already in sync with upstream."
+          fi
+
+      - name: Merge new strings into nl_NL.po (msgmerge)
+        # `--update` rewrites the .po in place with any new msgids from POT
+        # and removes the `~` backup. `--quiet` keeps the log readable.
+        run: msgmerge --update --backup=none --quiet nl_NL.po YOURLS.pot
+
+      - name: Compile nl_NL.po → nl_NL.mo (msgfmt)
+        # `--check` validates the .po format / refuses to emit a broken .mo.
+        run: msgfmt --check --output-file=nl_NL.mo nl_NL.po
+
+      - name: Commit + push changes
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name "translation-sync[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add YOURLS.pot nl_NL.po nl_NL.mo
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            # `[skip ci]` suppresses the recursive trigger this workflow
+            # would otherwise fire on its own push.
+            git commit -m "chore(i18n): sync upstream POT + recompile MO [skip ci]"
+            git push
+          fi
